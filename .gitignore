@@ -1,0 +1,9 @@
+#python cache fil
+__pycache__/
+
+#miljo variable
+.env
+
+#rapporter
+rapporter/
+
