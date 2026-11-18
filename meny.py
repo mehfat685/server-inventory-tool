@@ -1,5 +1,6 @@
 from lagring import spara_servrar
 from kontroller import kontrollera_server, kontrollera_alla
+from rapporter import exportera_csv
 
 def visa_meny():
     print("\n ==== SERVER INVENTORY TOOL ===")
@@ -43,6 +44,8 @@ def starta_meny(servrar,fil_namn):
                    kontrollera_alla(servrar)
                    spara_servrar(servrar,fil_namn)
                    print("Alla servrar har kontrollerats!")
+           case "7":
+               exportera_csv(servrar)
            case "8":
                print("Hejdå!")
                break
@@ -51,8 +54,17 @@ def starta_meny(servrar,fil_namn):
 
 
 def visa_alla_servrar(servrar):
-     for server in servrar:
-         print(server["namn"], server["adress"])
+     
+     print(f"{'Namn':<15} | {'Adress':<20} | {'Miljo':<10} | {'Roll':<25} | {'status':<10}")
+     print("-"*95)
+     for server in servrar: 
+         print(f"{server['namn']:<15} | "
+               f"{server['adress']:<20} | "
+               f"{server['miljo']:<10} | "
+               f"{server['roll']:<25} | "
+               f"{server['status']:<10}")
+
+   
     
 
 def visa_servrar_miljo(servrar):
