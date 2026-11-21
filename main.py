@@ -25,14 +25,21 @@ def main():
 
     if args.lista:
         if args.miljo:
+            print(f"{'Namn':<15} | {'Adress':<20} | {'Miljo':<10}")
+            print("-" * 51)
             for server in servrar:
                 if server["miljo"] == args.miljo:
-                    print(server["namn"], server["adress"], server["miljo"])
+                    print(f"{server['namn']:<15} | "
+                          f"{server['adress']:<20} | "
+                          f"{server['miljo']:<10}")
         else:
             visa_alla_servrar(servrar)
     elif args.kontrollera:
         for server in servrar:
             if server["namn"] == args.kontrollera:
+                print(f"{'Namn':<15} | {'Status':<10}")
+                print("-" * 28)
+
                 status = kontrollera_server(server)
                 spara_servrar(servrar,fil_namn)
  

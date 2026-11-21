@@ -38,6 +38,8 @@ def starta_meny(servrar,fil_namn):
                if current_server is None:
                    print("Servern finns inte!")
                else:
+                   print(f"{'Namn':<15} | {'Status':<10}")
+                   print("-" * 28)
                    kontrollera_server(current_server)
                    spara_servrar(servrar,fil_namn)
            case "6":
@@ -71,9 +73,11 @@ def visa_servrar_miljo(servrar):
     choice = input("Vilken miljo servrar vill du kolla (prod, dev, test): ")
 
     if giltig_miljo(choice):
+        print(f"{'Namn':<15} | {'Miljo':<15}")
+        print("-" * 28)
         for server in servrar:
             if choice == server["miljo"]: 
-                print(server["namn"],server["miljo"])
+                print(f"{server['namn']:<15} | {server['miljo']}")
     else:
         print("Ogiltigt miljo!")
         return   

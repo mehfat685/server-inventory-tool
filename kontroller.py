@@ -20,12 +20,13 @@ def kontrollera_server(servrar):
 
    servrar["senast_kontrollerad"] = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-   print(f"{servrar['namn']}: {servrar['status']}")
+   print(f"{servrar['namn']:<15} | {servrar['status']:<10}")
    return servrar["status"]
 
 def kontrollera_alla(servrar):
     alla_uppe = True
-
+    print(f"{'Namn':<15} | {'status':<10}")
+    print("-" * 28)
     for server in servrar:
         status = kontrollera_server(server)
         
