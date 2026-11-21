@@ -5,7 +5,7 @@
         "miljo": "prod",
         "roll": "webbserver",
         "status": "up",
-        "senast_kontrollerad": "2026-11-21 20:38"
+        "senast_kontrollerad": "2026-11-21 20:55"
     },
     {
         "namn": "db01",
@@ -13,7 +13,7 @@
         "miljo": "prod",
         "roll": "databas",
         "status": "up",
-        "senast_kontrollerad": "2026-11-21 20:38"
+        "senast_kontrollerad": "2026-11-21 20:55"
     },
     {
         "namn": "test01",
@@ -21,7 +21,7 @@
         "miljo": "test",
         "roll": "testserver",
         "status": "down",
-        "senast_kontrollerad": "2026-11-21 20:38"
+        "senast_kontrollerad": "2026-11-21 20:55"
     },
     {
         "namn": "dev01",
@@ -29,14 +29,14 @@
         "miljo": "dev",
         "roll": "utvecklingsserver",
         "status": "up",
-        "senast_kontrollerad": "2026-11-21 20:38"
+        "senast_kontrollerad": "2026-11-21 20:55"
     },
     {
         "namn": "apache",
-        "adress": "128.0.0.0",
-        "miljo": "dev",
-        "roll": "utvecklingserver",
+        "adress": "jdsf",
+        "miljo": "test",
+        "roll": "testserver",
         "status": "down",
-        "senast_kontrollerad": "2026-11-21 20:38"
+        "senast_kontrollerad": "2026-11-21 20:55"
     }
 ]

@@ -99,19 +99,19 @@ def server_namn_finns(servrar,namn):
 
 
 def lagg_till_servrar(servrar,fil_namn):
-    namn = input("Ange serverns namn: ").strip()
+    namn = input(f"{'Ange namn':<15}: " ).strip()
     
     if server_namn_finns(servrar,namn):
         print("Namnet finns redan!")
     else:
-        adress = input("Ange adress: ")
+        adress = input(f"{'Ange adress':<15}: ")
         while True:
-            miljo =input( "Ange miljo: ")
+            miljo =input(f"{'Ange miljo':<15}: ")
             if giltig_miljo(miljo):
                 break
             else:
                 print("Ogiltigt miljo. Giltiga värde dev, prod, test. Försök igen!")
-        role = input("Ange role: ")
+        role = input(f"{'Ange role':<15}: ")
         ny_server = {
 
                "namn":namn,
